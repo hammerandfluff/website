@@ -19,8 +19,7 @@
 	},
 	"require-dev": {
 		"phpunit/phpunit"     : "*@stable",
-		"10up/wp_mock"        : "dev-dev",
-		"phpunit/php-code-coverage": "^5.0"
+		"10up/wp_mock"        : "dev-dev"
 	},
 	"extra": {
 		"installer-paths": {

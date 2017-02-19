@@ -30,10 +30,15 @@ module.exports = {
 				exclude: [/node_modules/]
 			},
 			{
+				test: /\.(jpe?g|gif|png|svg)$/,
+				use: 'file-loader?emitFile=false&name=[path][name].[ext]',
+			},
+			{
 				test: /\.scss$/,
 				use: ExtractTextPlugin.extract( {
 					fallback: 'style-loader',
-					use: ['css-loader', 'postcss-loader', 'sass-loader']
+					use: ['css-loader', 'postcss-loader', 'sass-loader'],
+					publicPath: '../../'
 				} )
 			}
 		]
