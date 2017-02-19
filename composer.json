@@ -1,0 +1,41 @@
+{
+	"name": "hnf/website",
+	"title": "hammer&fluff",
+	"description": "The hammer&fluff website",
+	"homepage": "https://hammerandfluff.com",
+	"type": "root",
+	"keywords": [],
+	"minimum-stability": "dev",
+	"prefer-stable": true,
+	"repositories": [
+		{
+			"type": "composer",
+			"url": "https://wpackagist.org"
+		}
+	],
+	"require": {
+		"vlucas/phpdotenv": "~2.2.0",
+		"johnpbloch/wordpress": "*",
+		"antecedent/patchwork": "1.2.*",
+		"phpunit/phpunit"     : "*@stable",
+		"brianium/paratest"   : "dev-master",
+		"10up/wp_mock"        : "dev-master"
+	},
+	"extra": {
+		"installer-paths": {
+			"wp-content/themes/{$name}": [
+				"type:wordpress-theme"
+			],
+			"wp-content/plugins/{$name}": [
+				"type:wordpress-plugin"
+			],
+			"wp-content/mu-plugins/{$name}": [
+				"type:wordpress-muplugin"
+			]
+		},
+		"wordpress-install-dir": "wp"
+	},
+	"config": {
+		"vendor-dir": "vendor"
+	}
+}
