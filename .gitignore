@@ -1,7 +1,8 @@
 # This block ignores everything in wp-content, using negation patters to
 # include the hnf theme directory.
-wp-content/**/*
+wp-content/*
 !wp-content/themes/
+wp-content/themes/*
 !wp-content/themes/hnf/
 
 # Ignore the dependency management directories
