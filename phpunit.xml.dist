@@ -1,0 +1,21 @@
+<phpunit
+	bootstrap="bootstrap.php.dist"
+	backupGlobals="false"
+	processIsolation="true"
+	colors="true">
+	<testsuites>
+		<testsuite name="Default">
+			<directory suffix="Tests.php">./wp-content/themes/hnf/tests/phpunit</directory>
+		</testsuite>
+	</testsuites>
+	<filter>
+		<whitelist>
+			<directory suffix=".php">./wp-content/themes/hnf/includes</directory>
+		</whitelist>
+	</filter>
+	<php>
+		<ini name="error_reporting" value="32767" />
+		<ini name="display_errors" value="1" />
+		<ini name="display_startup_errors" value="1" />
+	</php>
+</phpunit>

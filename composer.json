@@ -15,11 +15,12 @@
 	],
 	"require": {
 		"vlucas/phpdotenv": "~2.2.0",
-		"johnpbloch/wordpress": "*",
-		"antecedent/patchwork": "1.2.*",
+		"johnpbloch/wordpress": "*"
+	},
+	"require-dev": {
 		"phpunit/phpunit"     : "*@stable",
-		"brianium/paratest"   : "dev-master",
-		"10up/wp_mock"        : "dev-master"
+		"10up/wp_mock"        : "dev-dev",
+		"phpunit/php-code-coverage": "^5.0"
 	},
 	"extra": {
 		"installer-paths": {
@@ -34,6 +35,10 @@
 			]
 		},
 		"wordpress-install-dir": "wp"
+	},
+	"scripts": {
+		"test": "phpunit --coverage-clover --coverage-html",
+		"testAll": "composer test && npm test"
 	},
 	"config": {
 		"vendor-dir": "vendor"

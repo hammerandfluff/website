@@ -3,12 +3,10 @@
  */
 
 // Include dependencies
-const path = require( 'path' );
-const webpack = require( 'webpack' );
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
-
-// Paths
-const assets = path.resolve( __dirname, '../wp-content/themes/hnf/assets' );
+const path = require( 'path' ),
+	ExtractTextPlugin = require( 'extract-text-webpack-plugin' ),
+	BrowserSyncPlugin = require( 'browser-sync-webpack-plugin' ),
+	assets = path.resolve( __dirname, 'wp-content/themes/hnf/assets' );
 
 // Export config.
 module.exports = {
@@ -29,14 +27,14 @@ module.exports = {
 			{
 				test: /\.js$/,
 				use: 'babel-loader',
-				exclude: [ /node_modules/ ]
+				exclude: [/node_modules/]
 			},
 			{
 				test: /\.scss$/,
-				use: ExtractTextPlugin.extract({
+				use: ExtractTextPlugin.extract( {
 					fallback: 'style-loader',
-					use: [ 'css-loader', 'sass-loader' ]
-				})
+					use: ['css-loader', 'postcss-loader', 'sass-loader']
+				} )
 			}
 		]
 	},
@@ -44,6 +42,12 @@ module.exports = {
 		new ExtractTextPlugin( {
 			filename: 'css/dist/[name].css',
 			allChunks: true
+		} ),
+		new BrowserSyncPlugin( {
+			host: 'hnf.dev',
+			port: 8080,
+			open: 'external',
+			proxy: 'http://hnf.dev/'
 		} )
 	]
 };

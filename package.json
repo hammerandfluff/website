@@ -6,15 +6,21 @@
   "author": "lkwdwrd",
   "license": "MIT",
   "scripts": {
-    "lint": "eslint -c ./.config/.eslintrc wp-content/themes/assets/js/src/**/*.js",
-    "pack": "webpack -p --config .config/webpack.config.js",
+    "lint": "eslint wp-content/themes/assets/js/src/**/*.js",
+    "pack": "webpack -p",
     "prepack": "npm run lint",
-    "makepot": "cd wp-content/themes/hnf && wpi18n makepot --domain-path languages --type='theme'"
+    "makepot": "cd wp-content/themes/hnf && wpi18n makepot --domain-path languages --type='theme'",
+    "watch": "webpack -p --watch",
+    "test": "echo 'hi'",
+    "testAll": "composer test && npm test"
   },
   "devDependencies": {
+    "autoprefixer": "^6.7.3",
     "babel-core": "^6.23.1",
     "babel-loader": "^6.3.2",
     "babel-preset-es2015": "^6.22.0",
+    "browser-sync": "^2.18.8",
+    "browser-sync-webpack-plugin": "^1.1.4",
     "css-loader": "^0.26.1",
     "eslint": "^3.15.0",
     "eslint-config-allenmoore": "^2.0.0",
@@ -22,6 +28,7 @@
     "extract-text-webpack-plugin": "beta",
     "node-sass": "^4.5.0",
     "node-wp-i18n": "^1.0.2",
+    "postcss-loader": "^1.3.1",
     "sass-loader": "^6.0.1",
     "style-loader": "^0.13.1",
     "webpack": "^2.2.1"
