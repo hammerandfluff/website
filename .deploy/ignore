@@ -1,0 +1,16 @@
+.*
+.*/
+/node_modules/
+assets/*/src
+/bootstrap.php.dist
+/composer.json
+/composer.lock
+/package.json
+/phpunit.xml.dist
+*.config.js
+/yarn.lock
+/wp-content/uploads
+hnf/tests
+/wp/wp-content
+/wp/readme.html
+/wp/composer.json
