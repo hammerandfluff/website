@@ -21,7 +21,7 @@ before_deploy:
 - rm /tmp/deployer
 deploy:
   provider: script
-  script: .deploy/deploy.sh $PROD_USER $PROD_IP $PROD_PATH
+  script: bash $TRAVIS_BUILD_DIR/.deploy/deploy.sh $PROD_USER $PROD_IP $PROD_PATH
   skip_cleanup: true
   on:
     branch: master
