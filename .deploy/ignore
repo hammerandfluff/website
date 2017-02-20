@@ -1,6 +1,7 @@
 .*
 .*/
 --coverage-*
+google*.html
 /node_modules/
 assets/*/src
 /bootstrap.php.dist
