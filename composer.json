@@ -11,18 +11,6 @@
 		{
 			"type": "composer",
 			"url": "https://wpackagist.org"
-		},
-		{
-			"type": "package",
-			"package": {
-				"name": "tollmanz/memcached",
-				"version":"master",
-				"source": {
-					"url": "https://github.com/tollmanz/wordpress-pecl-memcached-object-cache.git",
-					"type": "git",
-					"reference":"master"
-				}
-			}
 		}
 	],
 	"require": {
@@ -37,7 +25,6 @@
 		"wpackagist-plugin/ajax-thumbnail-rebuild": "~1.12.0",
 		"wpackagist-theme/kyma": "~1.9.0",
 		"koodimonni/composer-dropin-installer": "^1.1",
-		"tollmanz/memcached": "master",
 		"wpackagist-plugin/batcache": "^1.4",
 		"lkwdwrd/wp-muplugin-loader": "^1.0.3"
 	},
@@ -60,7 +47,6 @@
 		},
 		"dropin-paths": {
 			"wp-content": [
-				"package:tollmanz/memcached:object-cache.php",
 				"package:wpackagist-plugin/batcache:advanced-cache.php"
 			]
 		},

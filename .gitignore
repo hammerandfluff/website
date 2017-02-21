@@ -1,6 +1,7 @@
 # This block ignores everything in wp-content, using negation patters to
 # include the hnf theme directory.
 wp-content/*
+!wp-content/object-cache.php
 !wp-content/themes/
 wp-content/themes/*
 !wp-content/themes/hnf/
