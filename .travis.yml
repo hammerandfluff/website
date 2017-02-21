@@ -24,6 +24,7 @@ before_deploy:
 deploy:
   provider: script
   script: bash $TRAVIS_BUILD_DIR/.deploy/deploy.sh $PROD_USER $PROD_IP $PROD_PATH
+  skip_cleanup: true
   on:
     branch: master
 addons:

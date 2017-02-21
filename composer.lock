@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "4f9aec8304d92693fea9e1cbe6db5841",
-    "content-hash": "424ba4473b0b17982579b66f889f4d9e",
+    "hash": "a7c6d61fdb77db518c391cefe0c68159",
+    "content-hash": "8d4df88dfcf367f147583d69363ad29c",
     "packages": [
         {
             "name": "composer/installers",
@@ -291,17 +291,6 @@
                 "wordpress"
             ],
             "time": "2017-02-21 03:41:18"
-        },
-        {
-            "name": "tollmanz/memcached",
-            "version": "master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/tollmanz/wordpress-pecl-memcached-object-cache.git",
-                "reference": "master"
-            },
-            "type": "library",
-            "time": "2014-10-25 23:58:42"
         },
         {
             "name": "vlucas/phpdotenv",
