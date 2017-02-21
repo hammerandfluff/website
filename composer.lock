@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "e51542c0b3374229f4a05ecf13b70d7b",
-    "content-hash": "9032a618dc9c3ee7f1aacd56de90a0e8",
+    "hash": "7b75cce6709b74e67d3506dd60c13968",
+    "content-hash": "1e1cac68014d6b48ea68440baeba40ec",
     "packages": [
         {
             "name": "composer/installers",
@@ -244,16 +244,16 @@
         },
         {
             "name": "lkwdwrd/wp-muplugin-loader",
-            "version": "1.0.2",
+            "version": "1.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/lkwdwrd/wp-muplugin-loader.git",
-                "reference": "9c960a83e7cf5deca6a3ac23f100006ee5c8c12c"
+                "reference": "8f55fdacffe9450b7b8cdc0c6fddb5198b455ce9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lkwdwrd/wp-muplugin-loader/zipball/9c960a83e7cf5deca6a3ac23f100006ee5c8c12c",
-                "reference": "9c960a83e7cf5deca6a3ac23f100006ee5c8c12c",
+                "url": "https://api.github.com/repos/lkwdwrd/wp-muplugin-loader/zipball/8f55fdacffe9450b7b8cdc0c6fddb5198b455ce9",
+                "reference": "8f55fdacffe9450b7b8cdc0c6fddb5198b455ce9",
                 "shasum": ""
             },
             "require": {
@@ -290,7 +290,7 @@
                 "muplugin",
                 "wordpress"
             ],
-            "time": "2017-02-21 00:29:38"
+            "time": "2017-02-21 03:41:18"
         },
         {
             "name": "tollmanz/memcache",
@@ -364,7 +364,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/ajax-thumbnail-rebuild.1.12.zip",
-                "reference": "tags/1.12",
+                "reference": null,
                 "shasum": null
             },
             "require": {
@@ -384,7 +384,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/batcache.1.4.zip",
-                "reference": "tags/1.4",
+                "reference": null,
                 "shasum": null
             },
             "require": {
@@ -404,7 +404,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/howdy-against-humanity.zip",
-                "reference": "trunk",
+                "reference": null,
                 "shasum": null
             },
             "require": {
@@ -424,7 +424,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/jetpack.4.6.zip",
-                "reference": "tags/4.6",
+                "reference": null,
                 "shasum": null
             },
             "require": {
@@ -444,7 +444,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/manual-control.0.2.zip",
-                "reference": "tags/0.2",
+                "reference": null,
                 "shasum": null
             },
             "require": {
@@ -464,7 +464,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/ninja-forms.3.0.27.zip",
-                "reference": "tags/3.0.27",
+                "reference": null,
                 "shasum": null
             },
             "require": {
@@ -484,7 +484,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/restricted-site-access.5.1.zip",
-                "reference": "tags/5.1",
+                "reference": null,
                 "shasum": null
             },
             "require": {
@@ -504,7 +504,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/wordpress-seo.4.3.zip",
-                "reference": "tags/4.3",
+                "reference": null,
                 "shasum": null
             },
             "require": {
@@ -524,7 +524,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/theme/kyma.1.9.zip",
-                "reference": "1.9",
+                "reference": null,
                 "shasum": null
             },
             "require": {
