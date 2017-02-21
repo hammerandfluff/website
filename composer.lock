@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "40b1f7403545a7a24a6ee2b98978ce50",
-    "content-hash": "c62a1505787c5b971489abe1543d0c20",
+    "hash": "e51542c0b3374229f4a05ecf13b70d7b",
+    "content-hash": "9032a618dc9c3ee7f1aacd56de90a0e8",
     "packages": [
         {
             "name": "composer/installers",
@@ -200,6 +200,110 @@
             "time": "2015-06-11 15:15:30"
         },
         {
+            "name": "koodimonni/composer-dropin-installer",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Koodimonni/Composer-Dropin-Installer.git",
+                "reference": "b09dd53d7bcbe41afec63bd142b17575935e2349"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Koodimonni/Composer-Dropin-Installer/zipball/b09dd53d7bcbe41afec63bd142b17575935e2349",
+                "reference": "b09dd53d7bcbe41afec63bd142b17575935e2349",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "^1.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "3.7.*-dev"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "class": "Koodimonni\\Composer\\Dropin"
+            },
+            "autoload": {
+                "psr-4": {
+                    "Koodimonni\\Composer\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "WTFPL"
+            ],
+            "authors": [
+                {
+                    "name": "Onni Hakala",
+                    "email": "onni@koodimonni.fi",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Install packages or a few files from packages into custom paths without overwriting existing stuff.",
+            "time": "2017-01-11 19:10:05"
+        },
+        {
+            "name": "lkwdwrd/wp-muplugin-loader",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/lkwdwrd/wp-muplugin-loader.git",
+                "reference": "9c960a83e7cf5deca6a3ac23f100006ee5c8c12c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/lkwdwrd/wp-muplugin-loader/zipball/9c960a83e7cf5deca6a3ac23f100006ee5c8c12c",
+                "reference": "9c960a83e7cf5deca6a3ac23f100006ee5c8c12c",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "^1.0"
+            },
+            "require-dev": {
+                "10up/wp_mock": "dev-dev",
+                "antecedent/patchwork": "^1.3.4",
+                "codeclimate/php-test-reporter": "^0.3.2",
+                "phpunit/phpunit": "^6.0.0"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "class": "LkWdwrd\\Composer\\MULoaderPlugin"
+            },
+            "autoload": {
+                "psr-4": {
+                    "LkWdwrd\\Composer\\": "src/lkwdwrd/Composer"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Luke Woodward",
+                    "email": "woodward.lucas@gmail.com"
+                }
+            ],
+            "description": "A drop-in MU Plugin loader for WordPress",
+            "keywords": [
+                "loader",
+                "muplugin",
+                "wordpress"
+            ],
+            "time": "2017-02-21 00:29:38"
+        },
+        {
+            "name": "tollmanz/memcache",
+            "version": "master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tollmanz/wordpress-pecl-memcached-object-cache.git",
+                "reference": "master"
+            },
+            "type": "library",
+            "time": "2014-10-25 23:58:42"
+        },
+        {
             "name": "vlucas/phpdotenv",
             "version": "v2.2.1",
             "source": {
@@ -260,7 +364,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/ajax-thumbnail-rebuild.1.12.zip",
-                "reference": null,
+                "reference": "tags/1.12",
                 "shasum": null
             },
             "require": {
@@ -268,6 +372,26 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/ajax-thumbnail-rebuild/"
+        },
+        {
+            "name": "wpackagist-plugin/batcache",
+            "version": "1.4",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/batcache/",
+                "reference": "tags/1.4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/batcache.1.4.zip",
+                "reference": "tags/1.4",
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/batcache/"
         },
         {
             "name": "wpackagist-plugin/howdy-against-humanity",
@@ -280,7 +404,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/howdy-against-humanity.zip",
-                "reference": null,
+                "reference": "trunk",
                 "shasum": null
             },
             "require": {
@@ -300,7 +424,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/jetpack.4.6.zip",
-                "reference": null,
+                "reference": "tags/4.6",
                 "shasum": null
             },
             "require": {
@@ -320,7 +444,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/manual-control.0.2.zip",
-                "reference": null,
+                "reference": "tags/0.2",
                 "shasum": null
             },
             "require": {
@@ -340,7 +464,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/ninja-forms.3.0.27.zip",
-                "reference": null,
+                "reference": "tags/3.0.27",
                 "shasum": null
             },
             "require": {
@@ -360,7 +484,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/restricted-site-access.5.1.zip",
-                "reference": null,
+                "reference": "tags/5.1",
                 "shasum": null
             },
             "require": {
@@ -380,7 +504,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/wordpress-seo.4.3.zip",
-                "reference": null,
+                "reference": "tags/4.3",
                 "shasum": null
             },
             "require": {
@@ -400,7 +524,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/theme/kyma.1.9.zip",
-                "reference": null,
+                "reference": "1.9",
                 "shasum": null
             },
             "require": {
