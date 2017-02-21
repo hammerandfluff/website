@@ -15,7 +15,7 @@
 		{
 			"type": "package",
 			"package": {
-				"name": "tollmanz/memcache",
+				"name": "tollmanz/memcached",
 				"version":"master",
 				"source": {
 					"url": "https://github.com/tollmanz/wordpress-pecl-memcached-object-cache.git",
@@ -37,13 +37,14 @@
 		"wpackagist-plugin/ajax-thumbnail-rebuild": "~1.12.0",
 		"wpackagist-theme/kyma": "~1.9.0",
 		"koodimonni/composer-dropin-installer": "^1.1",
-		"tollmanz/memcache": "master",
+		"tollmanz/memcached": "master",
 		"wpackagist-plugin/batcache": "^1.4",
 		"lkwdwrd/wp-muplugin-loader": "^1.0.3"
 	},
 	"require-dev": {
 		"phpunit/phpunit"     : "*@stable",
-		"10up/wp_mock"        : "dev-dev"
+		"10up/wp_mock"        : "dev-dev",
+		"wpackagist-plugin/debug-bar": "~0.8.4"
 	},
 	"extra": {
 		"installer-paths": {
@@ -59,7 +60,7 @@
 		},
 		"dropin-paths": {
 			"wp-content": [
-				"package:tollmanz/memcache:object-cache.php",
+				"package:tollmanz/memcached:object-cache.php",
 				"package:wpackagist-plugin/batcache:advanced-cache.php"
 			]
 		},

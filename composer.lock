@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "7b75cce6709b74e67d3506dd60c13968",
-    "content-hash": "1e1cac68014d6b48ea68440baeba40ec",
+    "hash": "4f9aec8304d92693fea9e1cbe6db5841",
+    "content-hash": "424ba4473b0b17982579b66f889f4d9e",
     "packages": [
         {
             "name": "composer/installers",
@@ -293,7 +293,7 @@
             "time": "2017-02-21 03:41:18"
         },
         {
-            "name": "tollmanz/memcache",
+            "name": "tollmanz/memcached",
             "version": "master",
             "source": {
                 "type": "git",
@@ -1981,6 +1981,26 @@
                 "validate"
             ],
             "time": "2016-11-23 20:04:58"
+        },
+        {
+            "name": "wpackagist-plugin/debug-bar",
+            "version": "0.8.4",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/debug-bar/",
+                "reference": "tags/0.8.4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/debug-bar.0.8.4.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/debug-bar/"
         }
     ],
     "aliases": [],
