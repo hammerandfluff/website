@@ -39,7 +39,8 @@
 		"koodimonni/composer-dropin-installer": "^1.1",
 		"tollmanz/memcache": "master",
 		"wpackagist-plugin/batcache": "^1.4",
-		"lkwdwrd/wp-muplugin-loader": "^1.0.2"
+		"lkwdwrd/wp-muplugin-loader": "^1.0.2",
+		"hamcrest/hamcrest-php": "^1.2.0"
 	},
 	"require-dev": {
 		"phpunit/phpunit"     : "*@stable",
