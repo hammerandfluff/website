@@ -31,6 +31,14 @@ if ( ! defined( 'DB_COLLATE' ) ) {
 }
 
 /**
+ * Set up Memcached Servers if needed.
+ */
+if ( defined( 'MEMCACHED_SERVERS' ) ) {
+	global $memcached_servers;
+	$memcached_servers = json_decode( MEMCACHED_SERVERS );
+}
+
+/**
  * WordPress Database Table prefix.
  */
 $table_prefix  = getenv( 'TABLE_PREFIX' );
