@@ -12,11 +12,29 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<?php wp_head(); ?>
 	</head>
-	<body <?php body_class(); ?>>
-		<header>
+	<body <?php body_class( 'sticky-header' ); ?>>
+		<header class="site-header">
 			<div class="tagline-bar">
 				<?php esc_html_e( 'telling your story, beautifully.™', 'hnf' ); ?>
 			</div>
-			<h1 class="logo"><img src="<?php echo esc_url( HNF_URL . '/assets/img/hnf-logo.svg' ); ?>" /><span><?php esc_html_e( 'hammer&amp;fluff', 'hnf' ); ?></span></h1>
+			<div class="constrained">
+				<<?php echo is_front_page() ? 'h1' : 'div' ?> class="logo" itemscope itemtype="http://schema.org/Organization">
+					<a itemprop="url" href="<?php echo home_url( '', 'relative' ); ?>">
+						<img itemprop="logo" src="<?php echo esc_url( HNF_URL . '/assets/img/hnf-logo.svg' ); ?>" alt="" />
+						<span class="screen-reader-text"><?php echo esc_attr( bloginfo( 'name' ) ); ?></span>
+					</a>
+				</<?php echo is_front_page() ? 'h1' : 'div' ?>>
+				<div class="nav-border-top"></div>
+				<nav class="site-navigation nav-menu" role="navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+					<?php
+						wp_nav_menu( array(
+							'container' => false,
+							'menu_class' => false,
+							'menu_id' => 'primary',
+							'fallback_cb' => '__return_null'
+						) );
+					?>
+				</nav>
+			</div>
 		</header>
 		<main>

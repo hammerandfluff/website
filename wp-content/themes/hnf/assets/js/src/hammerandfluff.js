@@ -6,6 +6,8 @@
  *
  */
 
-const test = () => 'blue';
+// Import dependencies
+import nav from './modules/nav';
 
-test();
+// Initialize
+nav();

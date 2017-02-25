@@ -3,10 +3,12 @@
  */
 
 // Include dependencies
-const path = require( 'path' ),
-	ExtractTextPlugin = require( 'extract-text-webpack-plugin' ),
-	BrowserSyncPlugin = require( 'browser-sync-webpack-plugin' ),
-	assets = path.resolve( __dirname, 'wp-content/themes/hnf/assets' );
+const path = require( 'path' );
+const ExtractTextPlugin = require( 'extract-text-webpack-plugin' );
+const BrowserSyncPlugin = require( 'browser-sync-webpack-plugin' );
+
+// Helper vars
+const assets = path.resolve( __dirname, 'wp-content/themes/hnf/assets' );
 
 // Export config.
 module.exports = {
@@ -31,7 +33,7 @@ module.exports = {
 			},
 			{
 				test: /\.(jpe?g|gif|png|svg)$/,
-				use: 'file-loader?emitFile=false&name=[path][name].[ext]',
+				use: 'file-loader?emitFile=false&name=[path][name].[ext]'
 			},
 			{
 				test: /\.scss$/,

@@ -1,0 +1,24 @@
+.nav-menu {
+	ul {
+		margin: 0;
+		padding: 0.5em;
+		list-style: none;
+		display: flex;
+		justify-content: center;
+	}
+	li {
+		line-height: 1;
+		margin: 0;
+		padding: 0 0.5em 0 0;
+	}
+	li ~ li {
+		padding-left: 0.5em;
+		border-left: 1px solid;
+	}
+	a {
+		text-decoration: none;
+	}
+	.current-menu-item {
+		font-weight: 700;
+	}
+}

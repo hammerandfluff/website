@@ -8,6 +8,7 @@ namespace HNF\Core;
  */
 function load() {
 	add_action( 'after_setup_theme', __NAMESPACE__ . '\\setup' );
+	add_action( 'after_setup_theme', __NAMESPACE__ . '\\setup_theme', 100 );
 }
 
 /**
@@ -16,10 +17,22 @@ function load() {
  * @return void
  */
 function setup() {
-	add_action( 'load',  __NAMESPACE__ . '\\i18n' );
+	add_action( 'hnf_setup_theme',  __NAMESPACE__ . '\\i18n' );
+	add_action( 'hnf_setup_theme', __NAMESPACE__ . '\\theme_support' );
+	add_action( 'hnf_setup_theme', __NAMESPACE__ . '\\menus' );
 	add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\\scripts' );
 	add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\\styles' );
 	add_action( 'wp_head',            __NAMESPACE__ . '\\header_meta' );
+
+}
+
+/**
+ * Fires the setup theme hook for theme functionality to run on.
+ *
+ * @return void
+ */
+function setup_theme() {
+	do_action( 'hnf_setup_theme' );
 }
 
 /**
@@ -32,7 +45,28 @@ function setup() {
  */
 function i18n() {
 	load_theme_textdomain( 'hnf', HNF_PATH . '/languages' );
- }
+}
+
+/**
+ * Registers support for various core theme features.
+ *
+ * @return void.
+ */
+function theme_support() {
+
+}
+
+/**
+ * Registers the various nav menus for this theme.
+ *
+ * @return void
+ */
+function menus() {
+	register_nav_menu(
+		'primary',
+		__( 'Primary Menu', 'hnf' )
+	);
+}
 
 /**
  * Enqueue scripts for front-end.

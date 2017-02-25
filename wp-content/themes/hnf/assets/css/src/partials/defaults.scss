@@ -28,6 +28,17 @@ html {
 
 body {
 	margin: 0;
+	margin-top: 180px;
+	@media screen and (min-width: $bp-small){
+		&.sticky-header {
+			margin-top: 220px;
+		}
+	}
+	@media screen and (min-width: $bp-small-mid){
+		&.sticky-header {
+			margin-top: 270px;
+		}
+	}
 }
 
 /**
