@@ -13,28 +13,30 @@
 		<?php wp_head(); ?>
 	</head>
 	<body <?php body_class( 'sticky-header' ); ?>>
-		<header class="site-header">
+		<header class="site-header" id="site-header">
 			<div class="tagline-bar">
 				<?php esc_html_e( 'telling your story, beautifully.™', 'hnf' ); ?>
 			</div>
-			<div class="constrained">
-				<<?php echo is_front_page() ? 'h1' : 'div' ?> class="logo" itemscope itemtype="http://schema.org/Organization">
+			<div class="header-drawer">
+				<div class="constrained">
+					<<?php echo is_front_page() ? 'h1' : 'div' ?> class="logo" itemscope itemtype="http://schema.org/Organization">
 					<a itemprop="url" href="<?php echo home_url( '', 'relative' ); ?>">
 						<img itemprop="logo" src="<?php echo esc_url( HNF_URL . '/assets/img/hnf-logo.svg' ); ?>" alt="" />
 						<span class="screen-reader-text"><?php echo esc_attr( bloginfo( 'name' ) ); ?></span>
 					</a>
-				</<?php echo is_front_page() ? 'h1' : 'div' ?>>
-				<div class="nav-border-top"></div>
-				<nav class="site-navigation nav-menu" role="navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-					<?php
+					</<?php echo is_front_page() ? 'h1' : 'div' ?>>
+					<div class="nav-border-top"></div>
+					<nav class="site-navigation nav-menu" role="navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+						<?php
 						wp_nav_menu( array(
 							'container' => false,
 							'menu_class' => false,
 							'menu_id' => 'primary',
 							'fallback_cb' => '__return_null'
 						) );
-					?>
-				</nav>
+						?>
+					</nav>
+				</div>
 			</div>
 		</header>
 		<main>

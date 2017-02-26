@@ -1,0 +1,47 @@
+.menu-clone {
+	display: none;
+	width: 100%;
+	top: 0;
+	@media screen and (min-width: $bp-small) {
+		position: fixed;
+		display: block;
+	}
+	.tagline-bar {
+		position: static;
+	}
+	.logo {
+		padding: 5px 0 5px;
+		max-width: 180px;
+
+		@media screen and ( min-width: $bp-small ) {
+			margin: 0;
+			padding: 8px 0;
+			max-width: 100px;
+		}
+		@media screen and (min-width: $bp-small-mid) {
+			padding: 15px 0 10px;
+		}
+	}
+	.site-navigation {
+		border-top: 0;
+		position: absolute;
+		bottom: 8px;
+		right: 0;
+		@media screen and (min-width: $bp-small-mid) {
+			bottom: 10px;
+		}
+
+		ul {
+			padding: 0;
+		}
+	}
+	.header-drawer {
+		background: $white;
+		transform: translate3d( 0, -100%, 0 );
+		transition: transform 0.7s ease;
+
+		.minimized-nav & {
+			transform: translate3d( 0, 0, 0 );
+		}
+	}
+}

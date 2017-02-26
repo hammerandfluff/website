@@ -10,4 +10,4 @@
 import nav from './modules/nav';
 
 // Initialize
-nav();
+nav( 'site-header' );

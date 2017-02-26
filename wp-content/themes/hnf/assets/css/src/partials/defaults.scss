@@ -15,7 +15,6 @@ html {
 	line-height: 1.4; /* 2 */
 	-ms-text-size-adjust: 100%; /* 3 */
 	-webkit-text-size-adjust: 100%; /* 3 */
-	font-size: 18px;
 	color: $gray;
 }
 
@@ -28,17 +27,7 @@ html {
 
 body {
 	margin: 0;
-	margin-top: 180px;
-	@media screen and (min-width: $bp-small){
-		&.sticky-header {
-			margin-top: 220px;
-		}
-	}
-	@media screen and (min-width: $bp-small-mid){
-		&.sticky-header {
-			margin-top: 270px;
-		}
-	}
+	margin-top: 50px;
 }
 
 /**

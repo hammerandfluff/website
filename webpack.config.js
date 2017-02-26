@@ -23,7 +23,7 @@ module.exports = {
 		path: assets,
 		filename: 'js/dist/[name].bundle.js'
 	},
-	devtool: 'source-map',
+	devtool: 'inline-source-map',
 	module: {
 		rules: [
 			{
