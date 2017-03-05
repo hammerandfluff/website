@@ -2,7 +2,7 @@ language: php
 php:
 - '7.1'
 before_install:
-- composer config packagist.lkwdwrd.com $SATIS_USER $SATIS_PASS
+- composer config http-basic.packagist.lkwdwrd.com $SATIS_USER $SATIS_PASS
 install:
 - composer install
 - nvm install 4
