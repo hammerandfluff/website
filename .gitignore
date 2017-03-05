@@ -19,3 +19,6 @@ wp/
 
 # Exclude dist directories
 dist
+
+# Exclude log files
+*.log

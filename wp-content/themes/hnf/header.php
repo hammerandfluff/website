@@ -25,7 +25,6 @@
 						<span class="screen-reader-text"><?php echo esc_attr( bloginfo( 'name' ) ); ?></span>
 					</a>
 					</<?php echo is_front_page() ? 'h1' : 'div' ?>>
-					<div class="nav-border-top"></div>
 					<nav class="site-navigation nav-menu" role="navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
 						<?php
 						wp_nav_menu( array(

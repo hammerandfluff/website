@@ -1,0 +1,48 @@
+.bbrow-tab {
+	position: relative;
+}
+.bbrow-tab-title {
+	position: relative;
+	display: block;
+	padding: 0.66em 2.5em 0.66em 1em;
+	background: #E8E7E7;
+	color: #767676;
+	font-weight: 600;
+	line-height: 1;
+	cursor: pointer;
+	margin-bottom: 0.25em;
+	margin-top: 0.25em;
+	border-radius: 5px;
+}
+.bbrow-tab-title::after {
+	content:"+";
+	position: absolute;
+	right: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	line-height: 1;
+	display: block;
+	font-size: 2em;
+	text-align: center;
+	vertical-align: middle;
+	height: 1em;
+	width: 1em;
+	transition: transform .5s ease-in-out;
+}
+.bbrow-tab-open .bbrow-tab-title::after {
+	-webkit-transform: translateY(-50%) rotate(-135deg);
+	transform: translateY(-50%) rotate(-135deg);
+}
+.bbrow-tab-content {
+	overflow: hidden;
+}
+.bbrow-tab-initialized .bbrow-tab-content {
+	transition: max-height .5s ease-in-out;
+}
+.bbrow-tab-content-inner {
+	padding: 1em;
+}
+
+.bbrow-tab-content-inner p:last-child {
+	margin-bottom: 0;
+}

@@ -11,7 +11,7 @@ import throttle from 'lodash.throttle';
  */
 const onScroll = () => {
 	// Measure top
-	const threshold = 200;
+	const threshold = 75;
 	const classList = document.body.classList;
 	const top = document.documentElement.scrollTop || document.body.scrollTop;
 

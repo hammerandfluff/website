@@ -7,6 +7,7 @@
 	},
 	"rules": {
 		"no-console": 0,
-		"one-var": [ 2, "never" ]
+		"one-var": [ 2, "never" ],
+		"no-param-reassign": [ 2, { "props": false } ]
 	}
 }

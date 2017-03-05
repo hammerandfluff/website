@@ -9,6 +9,9 @@
 
 /* Document
    ========================================================================== */
+* {
+	box-sizing: border-box;
+}
 
 html {
 	font-family: raleway, sans-serif; /* 1 */
@@ -377,4 +380,15 @@ template {
  */
 [hidden] {
 	display: none;
+}
+
+/* Other
+   ========================================================================== */
+
+main {
+	margin: 2em;
+	.constrained {
+		padding-left: 1.5em;
+		padding-right: 1.5em;
+	}
 }

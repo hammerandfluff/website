@@ -16,3 +16,4 @@ hnf/tests
 /wp/wp-content
 /wp/readme.html
 /wp/composer.json
+*.log

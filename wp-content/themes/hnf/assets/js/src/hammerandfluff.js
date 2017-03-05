@@ -7,7 +7,9 @@
  */
 
 // Import dependencies
-import nav from './modules/nav';
+// import nav from './modules/nav';
+import accordion from './modules/accordion';
 
 // Initialize
-nav( 'site-header' );
+// nav( 'site-header' );
+accordion();
