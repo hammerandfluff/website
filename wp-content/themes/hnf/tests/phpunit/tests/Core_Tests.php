@@ -44,6 +44,7 @@ class Core_Tests extends Base\TestCase {
 	public function test_load() {
 		// Setup
 		\WP_Mock::expectActionAdded( 'after_setup_theme', 'HNF\Core\setup' );
+		\WP_Mock::expectActionAdded( 'after_setup_theme', 'HNF\Core\setup_theme', 100 );
 
 		// Act
 		$return = load();
@@ -57,10 +58,12 @@ class Core_Tests extends Base\TestCase {
 	 */
 	public function test_setup() {
 		// Setup
-		\WP_Mock::expectActionAdded( 'load', 'HNF\Core\i18n' );
-		\WP_Mock::expectActionAdded( 'wp_enqueue_scripts', 'HNF\Core\scripts' );
-		\WP_Mock::expectActionAdded( 'wp_enqueue_scripts', 'HNF\Core\styles'  );
-		\WP_Mock::expectActionAdded( 'wp_head', 'HNF\Core\header_meta' );
+		\WP_Mock::expectActionAdded( 'hnf_setup_theme', 'HNF\\Core\\i18n' );
+		\WP_Mock::expectActionAdded( 'hnf_setup_theme', 'HNF\\Core\\theme_support' );
+		\WP_Mock::expectActionAdded( 'hnf_setup_theme', 'HNF\\Core\\menus' );
+		\WP_Mock::expectActionAdded( 'wp_enqueue_scripts', 'HNF\\Core\\scripts' );
+		\WP_Mock::expectActionAdded( 'wp_enqueue_scripts', 'HNF\\Core\\styles' );
+		\WP_Mock::expectActionAdded( 'wp_head', 'HNF\\Core\\header_meta' );
 
 		// Act
 		$return = setup();

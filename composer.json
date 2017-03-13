@@ -19,7 +19,7 @@
 	],
 	"require": {
 		"vlucas/phpdotenv": "~2.2.0",
-		"johnpbloch/wordpress": "*",
+		"johnpbloch/wordpress": "~4.7.3",
 		"wpackagist-plugin/ninja-forms": "~3.0.27",
 		"wpackagist-plugin/howdy-against-humanity": "~1.0.0",
 		"wpackagist-plugin/restricted-site-access": "~5.1.0",

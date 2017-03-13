@@ -10,7 +10,7 @@ use PHPUnit\Framework\TestCase as Base;
 class TestCase extends Base {
 	protected $testFiles = array();
 
-	public function run( \PHPUnit\Framework\TestResult $result = NULL ) {
+	public function run( \PHPUnit_Framework_TestResult $result = NULL ) {
 		$this->setPreserveGlobalState( false );
 		return parent::run( $result );
 	}

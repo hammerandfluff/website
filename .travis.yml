@@ -5,11 +5,11 @@ before_install:
 - composer config http-basic.packagist.lkwdwrd.com $SATIS_USER $SATIS_PASS
 install:
 - composer install
-- nvm install 4
-- npm install
-- npm run pack
+- yarn install
+- yarn run pack
 script: composer testAll
 cache:
+  yarn: true
   directories:
   - vendor
   - node_modules
