@@ -25,7 +25,7 @@
     "eslint": "^3.15.0",
     "eslint-config-allenmoore": "^2.0.0",
     "eslint-plugin-import": "^2.2.0",
-    "extract-text-webpack-plugin": "beta",
+    "extract-text-webpack-plugin": "^2.1.0",
     "file-loader": "^0.10.0",
     "node-sass": "^4.5.0",
     "node-wp-i18n": "^1.0.2",
