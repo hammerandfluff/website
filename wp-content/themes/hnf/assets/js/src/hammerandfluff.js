@@ -11,5 +11,4 @@
 import accordion from './modules/accordion';
 
 // Initialize
-// nav( 'site-header' );
 accordion();

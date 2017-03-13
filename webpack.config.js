@@ -17,6 +17,9 @@ module.exports = {
 		main: [
 			'./js/src/hammerandfluff.js',
 			'./css/src/hammerandfluff.scss'
+		],
+		objectFit: [
+			'./js/src/vendor-object-fit.js'
 		]
 	},
 	output: {

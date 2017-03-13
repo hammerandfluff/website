@@ -15,10 +15,8 @@ define( 'HNF_INC',          HNF_PATH . 'includes/' );
 
 // Include files
 require_once HNF_INC . 'core.php';
-require_once HNF_INC . 'builder/clean.php';
 require_once HNF_INC . 'builder/init.php';
 
 // Run the setup functions
 HNF\Core\load();
-HNF\Builder\Clean\load();
 HNF\Builder\Init\load();

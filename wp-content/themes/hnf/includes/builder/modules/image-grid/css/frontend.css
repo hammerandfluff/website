@@ -1,0 +1,42 @@
+.hnf-image-grid {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.hnf-image-grid-item {
+	background: gray;
+	position: relative;
+	overflow: hidden;
+}
+
+.hnf-image-grid-item::before {
+	content: '';
+	display: block;
+	width: 100%;
+	padding-top: 100%;
+}
+
+.hnf-image-grid-inner {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+.hnf-image-grid-item .hnf-image-grid-image {
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+}
+
+.hnf-image-grid-title {
+	font-size: 1.2em;
+	color: #58595B;
+	font-weight: 700;
+	position: absolute;
+	width: 100%;
+	background: rgba( 255, 255, 255, 0.65 );
+	left: 0;
+	right: 0;
+}
