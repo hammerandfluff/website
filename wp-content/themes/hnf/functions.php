@@ -14,6 +14,7 @@ define( 'HNF_PATH',         get_template_directory() . '/' );
 define( 'HNF_INC',          HNF_PATH . 'includes/' );
 
 // Include files
+require_once HNF_INC . 'helpers.php';
 require_once HNF_INC . 'core.php';
 require_once HNF_INC . 'builder/init.php';
 

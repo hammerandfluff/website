@@ -25,6 +25,7 @@ function setup() {
 	add_action( 'init', __NAMESPACE__ . '\\init' );
 	add_action( 'hnf_bb_setup', __NAMESPACE__ . '\\startup' );
 	add_filter( 'fl_builder_color_presets', __NAMESPACE__ . '\\colors' );
+	add_filter( 'fl_builder_settings_form_defaults', __NAMESPACE__ . '\\global_defaults', 10, 2 );
 	do_action( 'hnf_bb_setup' );
 }
 
@@ -88,4 +89,16 @@ function colors( $colors ) {
 		'43c3d8'
 	);
 	return $colors;
+}
+
+function global_defaults( $settings, $type ) {
+	if ( 'global' === $type ) {
+		$settings->row_width = '900';
+		$settings->row_margins = '0';
+		$settings->row_padding = '0';
+		$settings->module_margins = '0';
+		$settings->responsive_breakpoint = '600';
+		$settings->medium_breakpoing = '960';
+	}
+	return $settings;
 }

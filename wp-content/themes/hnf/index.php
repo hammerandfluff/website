@@ -7,12 +7,17 @@
  */
 
 get_header(); ?>
-	<div class="constrained">
 		<?php if ( have_posts() ) : ?>
 			<?php while ( have_posts() ): the_post(); ?>
-				<h2><?php the_title(); ?></h2>
-				<?php the_content(); ?>
+				<div class="constrained">
+					<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> itemscope itemtype="https://schema.org/BlogPosting">
+							<header>
+								<?php \HNF\Helpers\get_template_part( 'title' ); ?>
+							</header>
+							<?php \HNF\Helpers\get_template_part( 'publisher', 'meta' ); ?>
+							<?php \HNF\Helpers\get_template_part( 'content', 'excerpt' ); ?>
+					</article><!--/itemtype=BlogPosting-->
+				</div>
 			<?php endwhile; ?>
 		<?php endif; ?>
-	</div>
 <?php get_footer();
