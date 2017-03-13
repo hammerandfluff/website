@@ -31,8 +31,7 @@ branches:
     - master
 
 before_deploy:
-  - openssl aes-256-cbc -K $encrypted_9da0e217f314_key -iv $encrypted_9da0e217f314_iv
-  -in .deploy/deployer.enc -out /tmp/deployer -d
+  - openssl aes-256-cbc -K $encrypted_9da0e217f314_key -iv $encrypted_9da0e217f314_iv -in .deploy/deployer.enc -out /tmp/deployer -d
   - eval "$(ssh-agent -s)"
   - chmod 600 /tmp/deployer
   - ssh-add /tmp/deployer
