@@ -23,3 +23,20 @@ function get_template_part( $slug, $name = null ) {
 		\get_template_part( $slug, $name );
 	}
 }
+
+function heading_level() {
+	return is_singular() ? 'h1' : 'h2';
+}
+
+function header_class( $classes = '' ) {
+	if ( ! is_array( $classes ) ) {
+		$classes = preg_split( '#\s+#', $classes );
+	}
+
+	$classes = apply_filters( 'hnf_header_class', $classes );
+	$classes = array_filter( array_unique( array_map( 'esc_attr', $classes ) ) );
+
+	if ( $classes ) {
+		echo 'class="' . implode( ' ', $classes ) . '"';
+	}
+}

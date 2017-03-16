@@ -26,11 +26,14 @@ function setup() {
 	add_action( 'hnf_bb_setup', __NAMESPACE__ . '\\startup' );
 	add_filter( 'fl_builder_color_presets', __NAMESPACE__ . '\\colors' );
 	add_filter( 'fl_builder_settings_form_defaults', __NAMESPACE__ . '\\global_defaults', 10, 2 );
+	add_action( 'post_class', __NAMESPACE__ . '\\no_constrained' );
+	add_action( 'hnf_header_class', __NAMESPACE__ . '\\constrained_header' );
 	do_action( 'hnf_bb_setup' );
 }
 
 /**
  * Includes the beaver builder customizations and intializes them.
+ *
  * @return void
  */
 function startup() {
@@ -91,6 +94,13 @@ function colors( $colors ) {
 	return $colors;
 }
 
+/**
+ * Sets global defaults for Beaver Builder for this theme.
+ *
+ * @param  stdClass $settings An object full of settings for the passed type.
+ * @param  string   $type     The type of settings being worked on.
+ * @return stdClass           The updated settings object.
+ */
 function global_defaults( $settings, $type ) {
 	if ( 'global' === $type ) {
 		$settings->row_width = '900';
@@ -101,4 +111,30 @@ function global_defaults( $settings, $type ) {
 		$settings->medium_breakpoing = '960';
 	}
 	return $settings;
+}
+
+/**
+ * Removes the constrained class from the post_class when the builder is active.
+ *
+ * @param  array $classes The array of post classes.
+ * @return array          The updated array of post classes.
+ */
+function no_constrained( $classes ) {
+	if ( \FLBuilderModel::is_builder_enabled() ) {
+		$classes = array_diff( $classes, [ 'constrained' ] );
+	}
+	return $classes;
+}
+
+/**
+ * Adds the constrained class to the header if it's output on a builder page.
+ *
+ * @param  array $classes The array of header classes.
+ * @return array          The updated array of header classes.
+ */
+function constrained_header( $classes ) {
+	if ( \FLBuilderModel::is_builder_enabled() ) {
+		$classes[] = 'constrained';
+	}
+	return $classes;
 }

@@ -19,12 +19,12 @@
 			</div>
 			<div class="header-drawer">
 				<div class="constrained">
-					<<?php echo is_front_page() ? 'h1' : 'div' ?> class="logo" itemscope itemtype="http://schema.org/Organization">
+					<<?php echo !is_singular() ? 'h1' : 'div' ?> class="logo" itemscope itemtype="http://schema.org/Organization">
 					<a itemprop="url" href="<?php echo home_url( '', 'relative' ); ?>">
 						<img itemprop="logo" src="<?php echo esc_url( HNF_URL . '/assets/img/hnf-logo.svg' ); ?>" alt="" />
 						<span class="screen-reader-text"><?php echo esc_attr( bloginfo( 'name' ) ); ?></span>
 					</a>
-					</<?php echo is_front_page() ? 'h1' : 'div' ?>>
+					</<?php echo !is_singular() ? 'h1' : 'div' ?>>
 					<nav class="site-navigation nav-menu" role="navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
 						<?php
 						wp_nav_menu( array(

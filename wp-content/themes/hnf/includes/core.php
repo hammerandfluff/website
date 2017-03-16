@@ -22,8 +22,7 @@ function setup() {
 	add_action( 'hnf_setup_theme', __NAMESPACE__ . '\\menus' );
 	add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\\scripts' );
 	add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\\styles' );
-	add_action( 'wp_head',            __NAMESPACE__ . '\\header_meta' );
-
+	add_action( 'wp_head', __NAMESPACE__ . '\\header_meta' );
 }
 
 /**
