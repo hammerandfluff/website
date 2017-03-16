@@ -42,6 +42,7 @@ function startup() {
 	$modules = apply_filters( 'hnf_bb_startup_items', [
 		'modules/base.php' => false,
 		'accordion-row.php' => $ns .'Accordion_Row\\load',
+		'rich-text-columns.php' => $ns . 'Rich_Text_Columns\\load',
 		'modules/image-grid/image-grid.php' => [
 			$ns . 'Modules\\ImageGrid',
 			'load'
