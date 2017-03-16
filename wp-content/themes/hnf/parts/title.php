@@ -1,3 +1,5 @@
 <<?php echo \HNF\Helpers\heading_level(); ?> itemprop="headline">
-	<?php the_title(); ?>
+	<a href="<?php the_permalink() ?>">
+		<?php the_title(); ?>
+	</a>
 </<?php echo \HNF\Helpers\heading_level(); ?>>
