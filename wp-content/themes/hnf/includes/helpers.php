@@ -13,7 +13,7 @@ namespace HNF\Helpers;
  * @return void
  */
 function get_template_part( $slug, $name = null ) {
-	$filtered = apply_filters( "hnf_partial_{$slug}_$name", [
+	$filtered = apply_filters( "hnf_partial", [
 		'slug' => 'parts/' . $slug,
 		'name' => $name
 	] );

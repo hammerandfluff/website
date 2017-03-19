@@ -23,6 +23,8 @@ function setup() {
 	add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\\scripts' );
 	add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\\styles' );
 	add_action( 'wp_head', __NAMESPACE__ . '\\header_meta' );
+	add_action( 'the_content_more_link', __NAMESPACE__ . '\\more_text', 10, 2 );
+	add_filter( 'excerpt_more', __NAMESPACE__ . '\\excerpt_more' );
 }
 
 /**
@@ -52,7 +54,17 @@ function i18n() {
  * @return void.
  */
 function theme_support() {
-
+	$GLOBALS['content_width'] = 900;
+	add_theme_support( 'automatic-feed-links' );
+	add_theme_support( 'title-tag' );
+	add_theme_support( 'post-thumbnails' );
+	add_theme_support( 'customize-selective-refresh-widgets' );
+	add_theme_support( 'html5', array(
+		'comment-form',
+		'comment-list',
+		'gallery',
+		'caption',
+	) );
 }
 
 /**
@@ -110,4 +122,32 @@ function header_meta() {
 	$humanstxt = apply_filters( 'hnf_humans', HNF_TEMPLATE_URL . '/humans.txt' );
 
 	echo '<link type="text/plain" rel="author" href="' . esc_url( $humanstxt ) . '" />';
+}
+
+function more_text( $markup ) {
+	// use core text domain since this is a core string.
+	$default = __( '(more&hellip;)' );
+	if ( false !== strpos( $markup, $default ) ) {
+		$markup = str_replace(
+			$default,
+			__( 'Continue Reading', 'hnf' ),
+			$markup
+		);
+	}
+	return $markup;
+}
+
+function excerpt_more( $markup ) {
+	// Borrow core markup for consistency
+	$more_link_text = sprintf(
+		'<span aria-label="%1$s">%2$s</span>',
+		sprintf(
+			/* translators: %s: Name of current post */
+			__( 'Continue reading %s' ),
+			the_title_attribute( array( 'echo' => false ) )
+		),
+		__( 'Continue Reading', 'hnf' )
+	);
+
+	 return '&hellip;<p><a href="' . get_permalink() .'" class="more-link">' . $more_link_text . '</a></p>';
 }

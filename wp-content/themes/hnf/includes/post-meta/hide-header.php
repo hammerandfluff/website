@@ -3,7 +3,7 @@
  * The post meta for hiding titles with output.
  */
 
- namespace HNF\Post_Meta\Hide_Title;
+ namespace HNF\Post_Meta\Hide_Header;
 
 /**
  * Sets up this file with the WordPress API.
@@ -22,7 +22,20 @@ function load() {
 function setup() {
 	add_action( 'post_submitbox_misc_actions',  __NAMESPACE__ . '\\checkbox' );
 	add_action( 'save_post', __NAMESPACE__ . '\\save' );
-	add_filter( 'is_protected_meta', __NAMESPACE__ . 'hidden', 10, 2 );
+	add_filter( 'is_protected_meta', __NAMESPACE__ . '\\hidden', 10, 2 );
+	add_filter( 'hnf_partial', __NAMESPACE__ . '\\hide' );
+}
+
+/**
+ * The supported
+ * @return [type] [description]
+ */
+function sections( $post_type ) {
+	return apply_filters(
+		'hnf_hide_support',
+		[ 'header', 'title', 'byline', 'image' ],
+		$post_type
+	);
 }
 
 /**
@@ -38,20 +51,21 @@ function checkbox() {
 	}
 	// Output the checkbox and nonce
 	wp_nonce_field( 'hide_title_' . $post_id, 'hnf_ht_nonce' );
+	foreach ( sections( get_post_type() ) as $section ) {
 	?>
 	<div class="misc-pub-section misc-pub-section-last">
 		<label>
-			<input type="hidden" name="hnf_hide_title" value="0" />
 			<input
 				type="checkbox"
-				name="hnf_hide_title"
+				name="hnf_hide_<?php echo $section; ?>"
 				value="1"
-				<?php checked( get_post()->hide_title, '1', true); ?>
+				<?php checked( get_post()->{"hide_$section"}, '1', true ); ?>
 			/>
-			<?php esc_html_e( 'Hide the title', 'hnf' ); ?>
+			<?php echo esc_html( sprintf( __( 'Hide %s', 'hnf' ), $section ) ); ?>
 		</label>
 	</div>
 	<?php
+	}
 }
 
 /**
@@ -79,10 +93,12 @@ function save( $post_id ) {
 		return;
 	}
 	// Save data
-	if ( isset( $_POST['hnf_hide_title' ] ) && $_POST['hnf_hide_title' ] ) {
-		update_post_meta( $post_id, 'hide_title', 1 );
-	} else {
-		delete_post_meta( $post_id, 'hide_title' );
+	foreach( sections( get_post_type( $post_id ) ) as $section ) {
+		if ( isset( $_POST["hnf_hide_${section}"] ) && $_POST["hnf_hide_${section}"] ) {
+			update_post_meta( $post_id, "hide_${section}", '1' );
+		} else {
+			delete_post_meta( $post_id, "hide_${section}" );
+		}
 	}
 }
 
@@ -94,10 +110,29 @@ function save( $post_id ) {
  * @return boolean            Whether or not to protect the meta key.
  */
 function hidden( $protected, $meta_key ) {
-	if ( 'hide_title' === $meta_key ) {
-		$protected = true;
+	foreach( sections( get_post_type() ) as $section ) {
+		if ( "hide_${section}" === $meta_key ) {
+			$protected = true;
+			break;
+		}
 	}
 	return $protected;
+}
+
+/**
+ * Hide sections as needed when they are being output.
+ *
+ * @param  array $partial The partial being output.
+ * @return array          The partial array, updated as needed.
+ */
+function hide( $partial ) {
+	$slug = str_replace( 'parts/', '', $partial['slug'] );
+	if ( in_array( $slug, sections( get_post_type() ) ) ) {
+		if ( get_post()->{"hide_$slug"} ) {
+			$partial['slug'] = false;
+		}
+	}
+	return $partial;
 }
 
 /**

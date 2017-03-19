@@ -20,7 +20,7 @@
 			<div class="header-drawer">
 				<div class="constrained">
 					<<?php echo !is_singular() ? 'h1' : 'div' ?> class="logo" itemscope itemtype="http://schema.org/Organization">
-					<a itemprop="url" href="<?php echo home_url( '', 'relative' ); ?>">
+					<a itemprop="url" href="<?php echo site_url(); ?>">
 						<img itemprop="logo" src="<?php echo esc_url( HNF_URL . '/assets/img/hnf-logo.svg' ); ?>" alt="" />
 						<span class="screen-reader-text"><?php echo esc_attr( bloginfo( 'name' ) ); ?></span>
 					</a>

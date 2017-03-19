@@ -1,0 +1,19 @@
+.single .featured-image,
+.page .featured-image {
+	max-width: 550px;
+	max-height: 400px;
+	margin: 0 auto;
+
+	@media screen and ( min-width: $bp-small ) {
+		max-height: 800px;
+	}
+
+	@media screen and ( min-width: $bp-small-mid ) {
+		margin: 0 0 0 1em;
+		float: right;
+	}
+}
+
+.fl-builder-content{
+	clear: both;
+}

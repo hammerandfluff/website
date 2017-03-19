@@ -1,0 +1,50 @@
+.home, .archive {
+	article{
+		border-bottom: 1px solid $light-gray;
+		margin-bottom: 2em;
+	}
+
+	.more-link {
+		display: inline-block;
+		background: lighten( $teal, 15% );
+		color: white;
+		padding: 0.3em 0.5em;
+		font-size: 0.8em;
+		float: right;
+		clear: both;
+		text-decoration: none;
+		border-radius: 3px 3px 0 0;
+		text-transform: lowercase;
+		transition: background-color 0.5s ease;
+
+		&:hover {
+			background: $teal;
+		}
+	}
+
+	.featured-image {
+		float: left;
+		margin: 0.5em 1em 0.5em 0;
+		max-width: 200px;
+	}
+}
+
+.paged-nav {
+	display: flex;
+	justify-content: space-around;
+
+	a {
+		display: inline-block;
+		background: lighten( $gray, 15% );
+		color: white;
+		padding: 0.3em 0.5em;
+		text-decoration: none;
+		border-radius: 3px;
+		text-transform: lowercase;
+		transition: background-color 0.5s ease;
+
+		&:hover {
+			background: $gray;
+		}
+	}
+}

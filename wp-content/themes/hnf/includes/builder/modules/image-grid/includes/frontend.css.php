@@ -30,7 +30,6 @@
 
 	.fl-node-<?php echo $id ?> .hnf-image-grid-item {
 		flex: 0 1 calc( 1/<?php echo (int)$settings->columns_responsive; ?>*100% - (1 - 1/<?php echo (int)$settings->columns_responsive; ?>) * <?php echo (int)$settings->gutters_responsive ?>px );
-
 	}
 
 	<?php if ( 'yes' === $settings->titles ) : ?>

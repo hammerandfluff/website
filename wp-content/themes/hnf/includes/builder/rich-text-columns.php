@@ -29,7 +29,7 @@ function setup() {
  */
 function settings( $form, $id ) {
 	if ( 'rich-text' !== $id ) {
-		return;
+		return $form;
 	}
 	$form['general']['sections']['columns'] = [
 		'title' => __( 'Columns', 'hnf' ),

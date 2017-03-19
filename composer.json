@@ -31,7 +31,6 @@
 		"koodimonni/composer-dropin-installer": "^1.1",
 		"wpackagist-plugin/batcache": "^1.4",
 		"lkwdwrd/wp-muplugin-loader": "^1.0.3",
-		"wpackagist-plugin/shortcode-ui": "^0.7.0",
 		"wpbeaverbuilder/beaver-builder-pro": "~1.4.9",
 		"wpackagist-plugin/cb-custom-modules": "^4.8"
 	},
@@ -57,9 +56,7 @@
 				"package:wpackagist-plugin/batcache:advanced-cache.php"
 			]
 		},
-		"force-mu": [
-			"shortcode-ui"
-		],
+		"force-mu": [],
 		"wordpress-install-dir": "wp"
 	},
 	"scripts": {

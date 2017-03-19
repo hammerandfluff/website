@@ -1,0 +1,199 @@
+.screen-reader-text {
+	display: block;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: polygon(0px 0px, 0px 0px,0px 0px, 0px 0px);
+	position: absolute !important;
+	white-space: nowrap;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+
+.constrained {
+	max-width: 900px;
+	margin: 0 auto;
+}
+
+.wp-caption {
+	font-size: 0.8em;
+	border-radius: 3px;
+	background: lighten( $light-gray, 3% );
+	overflow: hidden;
+	margin: 0 0 1.3em;
+	max-width: 100%;
+
+	img {
+		border-radius: 0;
+		margin: 0;
+	}
+	figcaption {
+		padding-right: 1em;
+		padding-left: 1em;
+		margin-top: 0.3em;
+		margin-bottom: 0.5em;
+	}
+}
+
+.alignleft {
+	float: left;
+	margin-right: 1em;
+}
+
+.aligncenter {
+	display: block;
+	margin: 1em auto;
+	.wp-caption & {
+		margin: 1.3em auto;
+	}
+}
+
+.alignright {
+	float: right;
+	margin-left: 1em;
+}
+
+.alignnone {
+	margin-right: 1em;
+}
+
+.byline {
+	font-size: 0.85em;
+	margin-top: -1em;
+	margin-bottom: 1em;
+	a {
+		text-decoration: none;
+		color: $dark-gray;
+	}
+}
+
+.post-password-form {
+	max-width: 400px;
+	margin: 2em auto;
+	background: $light-gray;
+	padding: 0.5em 1em;
+	border-radius: 5px;
+}
+
+.attachment {
+	text-align: center;
+}
+
+.gallery {
+	clear: both;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.gallery-item {
+	margin: 0;
+	margin-left: 1em;
+	flex: 0 1 100%;
+	display: flex;
+	flex-direction: column;
+
+	img {
+		margin-bottom: 0;
+	}
+}
+
+.gallery-icon {
+	text-align: center;
+}
+
+.gallery-caption {
+	padding: 0.5em;
+	font-size: 0.85em;
+	background: $light-gray;
+	border-left: 1px solid $gray;
+	border-right: 1px solid $gray;
+	flex-grow: 1;
+	word-wrap: break-word;
+}
+
+@media screen and ( max-width: $bp-small ) {
+	.gallery-item:nth-child( n+1 ) {
+		margin-top: 2em;
+	}
+	.gallery-item {
+		margin-left: 0;
+	}
+}
+
+@media screen and ( min-width: $bp-small ) and ( max-width: $bp-small-mid ) {
+	@for $i from 2 through 3 {
+		.gallery-columns-#{$i} {
+			.gallery-item:nth-child(#{$i}n+1) {
+				margin-left: 0;
+			}
+			.gallery-item:nth-child(n+#{$i+1}) {
+				margin-top: 1em;
+			}
+			.gallery-item {
+				flex: 0 1 calc( 1/#{$i}*100% - (1 - 1/#{$i}) * 1em );
+				max-width: calc( 1/#{$i}*100% - (1 - 1/#{$i}) * 1em );
+			}
+		}
+	}
+	@for $i from 4 through 9 {
+		.gallery-columns-#{$i} {
+			.gallery-item:nth-child(3n+1) {
+				margin-left: 0;
+			}
+			.gallery-item:nth-child(n+4) {
+				margin-top: 1em;
+			}
+			.gallery-item {
+				flex: 0 1 calc( 1/3*100% - (1 - 1/3) * 1em );
+				max-width: calc( 1/3*100% - (1 - 1/3) * 1em );
+			}
+		}
+	}
+}
+
+@media screen and ( min-width: $bp-small-mid ) and ( max-width: $bp-large ) {
+	@for $i from 2 through 6 {
+		.gallery-columns-#{$i} {
+			.gallery-item:nth-child(#{$i}n+1) {
+				margin-left: 0;
+			}
+			.gallery-item:nth-child(n+#{$i+1}) {
+				margin-top: 1em;
+			}
+			.gallery-item {
+				flex: 0 1 calc( 1/#{$i}*100% - (1 - 1/#{$i}) * 1em );
+				max-width: calc( 1/#{$i}*100% - (1 - 1/#{$i}) * 1em );
+			}
+		}
+	}
+	@for $i from 7 through 9 {
+		.gallery-columns-#{$i} {
+			.gallery-item:nth-child(6n+1) {
+				margin-left: 0;
+			}
+			.gallery-item:nth-child(n+7) {
+				margin-top: 1em;
+			}
+			.gallery-item {
+				flex: 0 1 calc( 1/6*100% - (1 - 1/6) * 1em );
+				max-width: calc( 1/6*100% - (1 - 1/6) * 1em );
+			}
+		}
+	}
+}
+
+@media screen and ( min-width: $bp-large ) {
+	@for $i from 2 through 9 {
+		.gallery-columns-#{$i} {
+			.gallery-item:nth-child(#{$i}n+1) {
+				margin-left: 0;
+			}
+			.gallery-item:nth-child(n+#{$i+1}) {
+				margin-top: 1em;
+			}
+			.gallery-item {
+				flex: 0 0 calc( 1/#{$i}*100% - (1 - 1/#{$i}) * 1em );
+				max-width: calc( 1/#{$i}*100% - (1 - 1/#{$i}) * 1em );
+			}
+		}
+	}
+}
