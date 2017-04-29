@@ -28,6 +28,7 @@
 					<nav class="site-navigation nav-menu" role="navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
 						<?php
 						wp_nav_menu( array(
+							'theme_location' => 'primary',
 							'container' => false,
 							'menu_class' => false,
 							'menu_id' => 'primary',

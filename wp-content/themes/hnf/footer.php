@@ -10,7 +10,24 @@
 	<footer>
 		<section class="social-bar">
 			<div class="social-bar-constrain">
-				<a href="#"><?php esc_html_e( 'Facebook', 'hnf' ); ?></a><a href="https://www.instagram.com/hammerandfluff/"><?php esc_html_e( 'Instagram', 'hnf' ); ?></a>
+				<?php
+				wp_nav_menu( array(
+					'theme_location'=> 'footer-left',
+					'container' => false,
+					'menu_class' => false,
+					'menu_id' => 'footer-left',
+					'fallback_cb' => '__return_null'
+				) );
+				?>
+				<?php
+				wp_nav_menu( array(
+					'theme_location' => 'footer-right',
+					'container' => false,
+					'menu_class' => false,
+					'menu_id' => 'footer-right',
+					'fallback_cb' => '__return_null'
+				) );
+				?>
 			</div>
 		</section>
 		<section class="hammer-bar"></section>

@@ -77,6 +77,14 @@ function menus() {
 		'primary',
 		__( 'Primary Menu', 'hnf' )
 	);
+	register_nav_menu(
+		'footer-left',
+		__( 'Footer Left', 'hnf' )
+	);
+	register_nav_menu(
+		'footer-right',
+		__( 'Footer Right', 'hnf' )
+	);
 }
 
 /**
