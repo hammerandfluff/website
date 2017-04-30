@@ -29,7 +29,7 @@
 	}
 
 	.fl-node-<?php echo $id ?> .hnf-image-grid-item {
-		flex: 0 1 calc( 1/<?php echo (int)$settings->columns_responsive; ?>*100% - (1 - 1/<?php echo (int)$settings->columns_responsive; ?>) * <?php echo (int)$settings->gutters_responsive ?>px );
+		width: calc( 1/<?php echo (int)$settings->columns_responsive; ?>*100% - (1 - 1/<?php echo (int)$settings->columns_responsive; ?>) * <?php echo (int)$settings->gutters_responsive ?>px );
 	}
 
 	<?php if ( 'yes' === $settings->titles ) : ?>
@@ -54,7 +54,7 @@
 	}
 
 	.fl-node-<?php echo $id ?> .hnf-image-grid-item {
-		flex: 0 1 calc( 1/<?php echo (int)$settings->columns_medium; ?>*100% - (1 - 1/<?php echo (int)$settings->columns_medium; ?>) * <?php echo (int)$settings->gutters_medium ?>px );
+		width: calc( 1/<?php echo (int)$settings->columns_medium; ?>*100% - (1 - 1/<?php echo (int)$settings->columns_medium; ?>) * <?php echo (int)$settings->gutters_medium ?>px );
 
 	}
 	<?php if ( 'yes' === $settings->titles ) : ?>
@@ -78,7 +78,7 @@
 	}
 
 	.fl-node-<?php echo $id ?> .hnf-image-grid-item {
-		flex: 0 1 calc( 1/<?php echo (int)$settings->columns; ?>*100% - (1 - 1/<?php echo (int)$settings->columns; ?>) * <?php echo (int)$settings->gutters ?>px );
+		width: calc( 1/<?php echo (int)$settings->columns; ?>*100% - (1 - 1/<?php echo (int)$settings->columns; ?>) * <?php echo (int)$settings->gutters ?>px );
 
 	}
 
