@@ -123,6 +123,7 @@
 	height: 160px;
 	background-image: url("../../img/hammers.svg");
 	background-size: 160px 160px;
+	position: relative;
 }
 .hammer-bar::after {
 	content: '';
