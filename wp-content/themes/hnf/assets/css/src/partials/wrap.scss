@@ -121,8 +121,20 @@
 }
 .hammer-bar {
 	height: 160px;
+	background-image: url("../../img/hammers.svg");
+	background-size: 160px 160px;
+}
+.hammer-bar::after {
+	content: '';
+	display: block;
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
 	background-color: darken( $gray, 10% );
-	background-image: url("../../img/hammers.svg"), linear-gradient(to bottom,  $gray 0%, darken( $gray, 10% ) 100%);
+	background-image:  linear-gradient(to bottom,  $gray 0%, darken( $gray, 10% ) 100%);
 }
 .copyright {
 	padding: 1em 0;
