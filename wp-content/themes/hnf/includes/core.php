@@ -93,13 +93,13 @@ function menus() {
  * @return void
  */
 function scripts() {
-	wp_enqueue_script(
-		'hnf',
-		HNF_TEMPLATE_URL . "/assets/js/dist/main.bundle.js",
-		array(),
-		HNF_VERSION,
-		true
-	);
+	// wp_enqueue_script(
+	// 	'hnf',
+	// 	HNF_TEMPLATE_URL . "/assets/js/dist/main.bundle.js",
+	// 	array(),
+	// 	HNF_VERSION,
+	// 	true
+	// );
 }
 
 /**
