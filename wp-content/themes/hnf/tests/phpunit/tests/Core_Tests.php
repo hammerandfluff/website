@@ -95,22 +95,22 @@ class Core_Tests extends Base\TestCase {
 	/**
 	 * Test scripts enqueue.
 	 */
-	public function test_scripts() {
-		// Regular
-		\WP_Mock::userFunction( 'wp_enqueue_script', array(
-			'times' => 1,
-			'args' => array(
-				'hnf',
-				'template_url/assets/js/dist/main.bundle.js',
-				array(),
-				'0.1.0',
-				true,
-			),
-		) );
-
-		$return = scripts();
-		$this->assertNull( $return );
-	}
+	// public function test_scripts() {
+	// 	// Regular
+	// 	\WP_Mock::userFunction( 'wp_enqueue_script', array(
+	// 		'times' => 1,
+	// 		'args' => array(
+	// 			'hnf',
+	// 			'template_url/assets/js/dist/main.bundle.js',
+	// 			array(),
+	// 			'0.1.0',
+	// 			true,
+	// 		),
+	// 	) );
+	//
+	// 	$return = scripts();
+	// 	$this->assertNull( $return );
+	// }
 
 	/**
 	 * Test style enqueue.
