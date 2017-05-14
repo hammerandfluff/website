@@ -109,9 +109,15 @@ function scripts() {
  */
 function styles() {
 	wp_enqueue_style(
+		'gf-raleway',
+		'https://fonts.googleapis.com/css?family=Raleway:300,400,600,700',
+		[],
+		HNF_VERSION
+	);
+	wp_enqueue_style(
 		'hnf',
 		HNF_URL . "/assets/css/dist/main.css",
-		array(),
+		[],
 		HNF_VERSION
 	);
 }

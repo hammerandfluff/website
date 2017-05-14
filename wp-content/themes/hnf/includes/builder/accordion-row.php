@@ -40,6 +40,9 @@ function settings( $form, $id ) {
 }
 
 function accordion( $row ) {
+	if ( ! isset( $row->settings->accordion_title ) ) {
+		return;
+	}
 	if( $row->settings->accordion_title ) {
 		add_filter( 'fl_builder_locate_template_order', __NAMESPACE__ . '\\accordion_template' );
 		add_filter( 'fl_builder_row_attributes', __NAMESPACE__ . '\\accordion_class' );

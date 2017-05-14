@@ -28,6 +28,7 @@ function setup() {
 	add_filter( 'fl_builder_settings_form_defaults', __NAMESPACE__ . '\\global_defaults', 10, 2 );
 	add_action( 'post_class', __NAMESPACE__ . '\\no_constrained' );
 	add_action( 'hnf_header_class', __NAMESPACE__ . '\\constrained_header' );
+	add_action( 'fl_builder_font_families_system', __NAMESPACE__ . '\\raleway' );
 	do_action( 'hnf_bb_setup' );
 }
 
@@ -138,4 +139,27 @@ function constrained_header( $classes ) {
 		$classes[] = 'constrained';
 	}
 	return $classes;
+}
+
+/**
+ * Add 'Raleway' to the system fonts for Beaver Builder
+ *
+ * This allows the theme to manage the Raleway font-face so that changing
+ * settings in Beaver Builder doesn't override the font stack.
+ *
+ * @param  array $fonts The array of currently set system fonts.
+ * @return array        The updated array of fonts with Raleway included.
+ */
+function raleway( $fonts ) {
+	$fonts['Raleway'] = [
+		'fallback' => 'Helvetica, Arial, sans-serif',
+		'weights' => [
+			300,
+			400,
+			600,
+			700
+		]
+	];
+
+	return $fonts;
 }
