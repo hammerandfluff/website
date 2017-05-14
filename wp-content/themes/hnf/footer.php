@@ -5,6 +5,8 @@
  * @package hammer&amp;fluff
  * @since 0.1.0
  */
+
+use HNF\Customizer\Footer as Customizer;
 ?>
 	</main>
 	<footer>
@@ -32,7 +34,7 @@
 		</section>
 		<section class="hammer-bar"></section>
 		<section class="copyright">
-			<?php printf( esc_html__( '&copy;%s hammer&amp;fluff | All Rights Reserved', 'hnf' ), date('Y') ); ?>
+			<?php echo esc_html( Customizer\get_footer_text() ); ?>
 		</section>
 	</footer>
 	<?php wp_footer(); ?>

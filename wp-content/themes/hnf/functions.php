@@ -17,6 +17,7 @@ define( 'HNF_INC',          HNF_PATH . 'includes/' );
 require_once HNF_INC . 'helpers.php';
 require_once HNF_INC . 'core.php';
 require_once HNF_INC . 'builder/init.php';
+require_once HNF_INC . 'customizer/footer.php';
 require_once HNF_INC . 'post-meta/hide-header.php';
 require_once HNF_INC . 'post-types/post.php';
 require_once HNF_INC . 'post-types/page.php';
@@ -24,6 +25,7 @@ require_once HNF_INC . 'post-types/page.php';
 // Run the setup functions
 HNF\Core\load();
 HNF\Builder\Init\load();
+HNF\Customizer\Footer\load();
 HNF\Post_Meta\Hide_Header\load();
 HNF\Post_Types\Post\load();
 HNF\Post_Types\Page\load();
