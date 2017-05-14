@@ -116,8 +116,6 @@ const initializeToggle = ( tab ) => {
  * @return {boolean}      false to stop further action.
  */
 const eventClickTab = ( event ) => {
-	event.preventDefault();
-
 	let el = event.target;
 	let tabTitle = false;
 
@@ -126,15 +124,14 @@ const eventClickTab = ( event ) => {
 			tabTitle = true;
 		}
 		if ( el === document.body ) {
-			return false;
+			return;
 		}
 		el = el.parentElement;
 	}
 	if ( tabTitle ) {
+		event.preventDefault();
 		toggleMaxHeight( el );
 	}
-
-	return false;
 };
 
 /**

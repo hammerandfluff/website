@@ -22,7 +22,7 @@ function setup() {
 		return;
 	}
 
-	add_action( 'init', __NAMESPACE__ . '\\init' );
+	add_action( 'init', __NAMESPACE__ . '\\init', 1 );
 	add_action( 'hnf_bb_setup', __NAMESPACE__ . '\\startup' );
 	add_filter( 'fl_builder_color_presets', __NAMESPACE__ . '\\colors' );
 	add_filter( 'fl_builder_settings_form_defaults', __NAMESPACE__ . '\\global_defaults', 10, 2 );
@@ -30,6 +30,7 @@ function setup() {
 	add_action( 'hnf_header_class', __NAMESPACE__ . '\\constrained_header' );
 	add_action( 'fl_builder_font_families_system', __NAMESPACE__ . '\\raleway' );
 	do_action( 'hnf_bb_setup' );
+	do_action( 'hnf_bb_after_setup' );
 }
 
 /**

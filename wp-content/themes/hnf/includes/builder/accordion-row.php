@@ -7,7 +7,7 @@ namespace HNF\Builder\Accordion_Row;
  * @return void
  */
 function load() {
-	add_action( 'hnf_bb_init', __NAMESPACE__ . '\\setup' );
+	add_action( 'hnf_bb_after_setup', __NAMESPACE__ . '\\setup' );
 }
 
 /**
