@@ -19,21 +19,21 @@
 	],
 	"require": {
 		"vlucas/phpdotenv": "~2.2.0",
-		"johnpbloch/wordpress-core": "~4.8.1",
-		"wpackagist-plugin/ninja-forms": "~3.1.9",
+		"johnpbloch/wordpress-core": "*",
+		"wpackagist-plugin/ninja-forms": "~3.2.16",
 		"wpackagist-plugin/howdy-against-humanity": "~1.0.0",
-		"wpackagist-plugin/restricted-site-access": "~6.0.1",
-		"wpackagist-plugin/wordpress-seo": "~5.3.3",
-		"wpackagist-plugin/jetpack": "~5.2.1",
+		"wpackagist-plugin/restricted-site-access": "~6.1.0",
+		"wpackagist-plugin/wordpress-seo": "~7.1.0",
+		"wpackagist-plugin/jetpack": "~5.9.0",
 		"wpackagist-plugin/manual-control": "~0.2.0",
 		"wpackagist-plugin/ajax-thumbnail-rebuild": "~1.12.0",
-		"wpackagist-theme/kyma": "~1.9.0",
+		"wpackagist-theme/kyma": "~2.3.0",
 		"koodimonni/composer-dropin-installer": "^1.1",
 		"wpackagist-plugin/batcache": "^1.4",
 		"lkwdwrd/wp-muplugin-loader": "^1.0.3",
 		"wpbeaverbuilder/beaver-builder-pro": "~1.4.9",
 		"johnpbloch/wordpress-core-installer": "^0.2.1",
-    "wpackagist-plugin/duplicate-post": "~3.2"
+    "wpackagist-plugin/duplicate-post": "~3.2.1"
 	},
 	"require-dev": {
 		"phpunit/phpunit"     : "*@stable",
