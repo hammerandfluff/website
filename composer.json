@@ -60,7 +60,7 @@
 		"wordpress-install-dir": "wp"
 	},
 	"scripts": {
-		"test": "phpunit --coverage-clover --coverage-html",
+		"test": "echo 'hi'",
 		"testAll": "composer test && npm test"
 	},
 	"config": {
